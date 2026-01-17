@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EVAT</string>
+    <string name="splash_title">EVAT</string>
+    <string name="splash_subtitle">An Evacuation Center Tracker designed for Natural Risks and Disasters</string>
+    <string name="header_title">Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_location">Evacuation Center Map</string>
+    <string name="title_risk">Risk Prone Areas</string>
+    <string name="title_guidelines">Safety Guidelines</string>
+    <string name="title_hotlines">Hotlines</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_location">Map</string>
+    <string name="nav_risk">Risks</string>
+    <string name="nav_guidelines">Guidelines</string>
+    <string name="nav_hotlines">Hotlines</string>
+    <string name="map_placeholder">Map placeholder</string>
+</resources>
