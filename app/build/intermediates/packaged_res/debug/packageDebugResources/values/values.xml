@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_yellow">#F2C94C</color>
+    <color name="background">#F8FAFD</color>
+    <color name="nav_icon">#374151</color>
+    <color name="primary_blue">#2E86DE</color>
+    <color name="primary_blue_dark">#1F5FA3</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#4B5563</color>
+    <string name="app_name">EVAT</string>
+    <string name="header_title">Home</string>
+    <string name="map_placeholder">Map placeholder</string>
+    <string name="nav_guidelines">Guidelines</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_hotlines">Hotlines</string>
+    <string name="nav_location">Map</string>
+    <string name="nav_risk">Risks</string>
+    <string name="splash_subtitle">An Evacuation Center Tracker designed for Natural Risks and Disasters</string>
+    <string name="splash_title">EVAT</string>
+    <string name="title_guidelines">Safety Guidelines</string>
+    <string name="title_home">Home</string>
+    <string name="title_hotlines">Hotlines</string>
+    <string name="title_location">Evacuation Center Map</string>
+    <string name="title_risk">Risk Prone Areas</string>
+    <style name="Theme.Evat" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorSecondary">@color/accent_yellow</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>
