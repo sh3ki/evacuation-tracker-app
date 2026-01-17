@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_nav_home.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_nav_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\color_bottom_nav_icon_colors.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\color\\bottom_nav_icon_colors.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_evat_logo.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\evat_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_fragment_guidelines.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\fragment_guidelines.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_nav_guidelines.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_nav_guidelines.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\color_bottom_nav_text_colors.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\color\\bottom_nav_text_colors.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_fragment_risk.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\fragment_risk.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_nav_risk.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_nav_risk.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\menu_bottom_nav.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\menu\\bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_map_placeholder.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\map_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_fragment_hotlines.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\fragment_hotlines.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\layout_fragment_location.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\layout\\fragment_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_logo_placeholder.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\logo_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.evat.app-debug-40:/layout_fragment_risk.xml.flat",
+        "source": "com.evat.app-main-42:/layout/fragment_risk.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_bottom_nav_item_background.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\bottom_nav_item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\color_bottom_nav_ripple.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\color\\bottom_nav_ripple.xml"
+    },
+    {
+        "merged": "com.evat.app-debug-40:/drawable_location_pulse.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/location_pulse.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_nav_location.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_nav_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-debug-40:\\drawable_ic_nav_hotlines.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-42:\\drawable\\ic_nav_hotlines.xml"
+    }
+]
