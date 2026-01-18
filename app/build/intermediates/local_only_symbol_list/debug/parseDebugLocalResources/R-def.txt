@@ -5,7 +5,11 @@ color background
 color bottom_nav_icon_colors
 color bottom_nav_ripple
 color bottom_nav_text_colors
+color card_background
+color divider
+color ic_launcher_background
 color nav_icon
+color primary
 color primary_blue
 color primary_blue_dark
 color text_primary
