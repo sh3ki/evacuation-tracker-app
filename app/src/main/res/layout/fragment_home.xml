@@ -32,11 +32,129 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Evacuation Tracker"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="About EVAT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Stay informed about evacuation centers, risks, guidelines, and emergency hotlines."
+            android:text="EVAT is your comprehensive evacuation tracking companion designed to keep you safe during emergencies in Greater Lagro, Quezon City."
             android:textAlignment="center"
             android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Key Features"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/text_primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="📍 Real-Time Location Tracking"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="⚠️ Risk-Prone Area Mapping"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="🏥 Nearest Evacuation Centers"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="📞 Emergency Hotlines"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 Safety Guidelines &amp; Protocols"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/text_primary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Coverage Area"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Greater Lagro, Quezon City\nMetro Manila, Philippines"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
             android:fontFamily="sans-serif-medium"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Stay safe, stay informed, stay prepared with EVAT."
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="sans-serif"
             android:textColor="@color/text_secondary" />
     </LinearLayout>
 </ScrollView>
