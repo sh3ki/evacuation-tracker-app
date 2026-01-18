@@ -44,10 +44,11 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/evat_logo"
         android:label="EVAT"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/evat_logo"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.Evat" >
         <activity
             android:name="com.evat.app.SplashActivity"
