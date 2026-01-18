@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.1" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="7"
+            column="36"
+            startOffset="378"
+            endLine="7"
+            endColumn="77"
+            endOffset="419"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="28"/>
+            <entry
+                name="read"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LockedOrientationActivity"
+        severity="warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices">
+        <fix-attribute
+            description="Set screenOrientation=&quot;fullSensor&quot;"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="screenOrientation"
+            value="fullSensor"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="20"
+            column="13"
+            startOffset="837"
+            endLine="20"
+            endColumn="49"
+            endOffset="873"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LockedOrientationActivity"
+        severity="warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices">
+        <fix-attribute
+            description="Set screenOrientation=&quot;fullSensor&quot;"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="screenOrientation"
+            value="fullSensor"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="30"
+            column="13"
+            startOffset="1229"
+            endLine="30"
+            endColumn="49"
+            endOffset="1265"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nav_guidelines.xml"
+            line="8"
+            column="28"
+            startOffset="265"
+            endLine="8"
+            endColumn="48"
+            endOffset="285"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nav_home.xml"
+            line="8"
+            column="28"
+            startOffset="265"
+            endLine="8"
+            endColumn="48"
+            endOffset="285"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nav_hotlines.xml"
+            line="8"
+            column="28"
+            startOffset="265"
+            endLine="8"
+            endColumn="48"
+            endOffset="285"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nav_location.xml"
+            line="8"
+            column="28"
+            startOffset="265"
+            endLine="8"
+            endColumn="48"
+            endOffset="285"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nav_risk.xml"
+            line="8"
+            column="28"
+            startOffset="265"
+            endLine="8"
+            endColumn="48"
+            endOffset="285"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="CustomSplashScreen"
+        severity="warning"
+        message="The application should not provide its own launch screen">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/evat/app/SplashActivity.kt"
+            line="10"
+            column="7"
+            startOffset="237"
+            endLine="10"
+            endColumn="21"
+            endOffset="251"/>
+        <map>
+            <condition targetGE="31"/>
+        </map>
+    </incident>
+
+</incidents>
