@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/fragment_hotlines.xml",
+        "source": "com.evat.app-main-41:/layout/fragment_hotlines.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/fragment_home.xml",
+        "source": "com.evat.app-main-41:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/activity_main.xml",
+        "source": "com.evat.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/fragment_location.xml",
+        "source": "com.evat.app-main-41:/layout/fragment_location.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/activity_splash.xml",
+        "source": "com.evat.app-main-41:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/fragment_guidelines.xml",
+        "source": "com.evat.app-main-41:/layout/fragment_guidelines.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeReleaseResources-39:/layout/fragment_risk.xml",
+        "source": "com.evat.app-main-41:/layout/fragment_risk.xml"
+    }
+]
