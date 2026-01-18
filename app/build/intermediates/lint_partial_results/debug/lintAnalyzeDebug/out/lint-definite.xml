@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.1" type="incidents">
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="20"
+            column="13"
+            startOffset="837"
+            endLine="20"
+            endColumn="49"
+            endOffset="873"/>
+    </incident>
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="30"
+            column="13"
+            startOffset="1229"
+            endLine="30"
+            endColumn="49"
+            endOffset="1265"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Header icon&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="23"
+            column="13"
+            startOffset="905"
+            endLine="23"
+            endColumn="53"
+            endOffset="945"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="13"
+            column="9"
+            startOffset="517"
+            endLine="13"
+            endColumn="42"
+            endOffset="550"/>
+    </incident>
+
+    <incident
+        id="UseCompoundDrawables"
+        severity="warning"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="14"
+            column="10"
+            startOffset="489"
+            endLine="14"
+            endColumn="22"
+            endOffset="501"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Guidelines Icon&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="25"
+            column="17"
+            startOffset="936"
+            endLine="25"
+            endColumn="61"
+            endOffset="980"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Safety Guidelines&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="32"
+            column="17"
+            startOffset="1227"
+            endLine="32"
+            endColumn="49"
+            endOffset="1259"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Earthquake Safety&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="42"
+            column="13"
+            startOffset="1615"
+            endLine="42"
+            endColumn="45"
+            endOffset="1647"/>
+    </incident>
+
+    <incident
+        id="UseCompatTextViewDrawableXml"
+        severity="warning"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <fix-composite
+            description="Set drawableEndCompat=&quot;@android:drawable/arrow_down_float&quot; and Delete drawableEnd">
+            <fix-attribute
+                description="Set drawableEndCompat=&quot;@android:drawable/arrow_down_float&quot;"
+                namespace="http://schemas.android.com/apk/res-auto"
+                attribute="drawableEndCompat"
+                value="@android:drawable/arrow_down_float"/>
+            <fix-attribute
+                description="Delete drawableEnd"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="drawableEnd"/>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="73"
+            column="21"
+            startOffset="2963"
+            endLine="73"
+            endColumn="77"
+            endOffset="3019"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Before Earthquake&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="68"
+            column="21"
+            startOffset="2697"
+            endLine="68"
+            endColumn="53"
+            endOffset="2729"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;• Prepare emergency kit with food, water, and first aid\n• Secure heavy furniture and appliances\n• Identify safe spots in each room (under sturdy tables)\n• Create family emergency communication plan\n• Know evacuation routes and nearest evacuation centers&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="86"
+            column="21"
+            startOffset="3530"
+            endLine="86"
+            endColumn="293"
+            endOffset="3802"/>
+    </incident>
+
+    <incident
+        id="UseCompatTextViewDrawableXml"
+        severity="warning"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <fix-composite
+            description="Set drawableEndCompat=&quot;@android:drawable/arrow_down_float&quot; and Delete drawableEnd">
+            <fix-attribute
+                description="Set drawableEndCompat=&quot;@android:drawable/arrow_down_float&quot;"
+                namespace="http://schemas.android.com/apk/res-auto"
+                attribute="drawableEndCompat"
+                value="@android:drawable/arrow_down_float"/>
+            <fix-attribute
+                description="Delete drawableEnd"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="drawableEnd"/>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="118"
+            column="21"
+            startOffset="5194"
+            endLine="118"
+            endColumn="77"
+            endOffset="5250"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;During Earthquake&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="113"
+            column="21"
+            startOffset="4928"
+            endLine="113"
+            endColumn="53"
+            endOffset="4960"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;• DROP, COVER, and HOLD ON\n• Stay indoors if you&apos;re inside\n• Move away from windows and heavy objects\n• If outdoors, move to open area away from buildings\n• If driving, pull over and stay in vehicle\n• Stay calm and protect your head and neck&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="131"
+            column="21"
+            startOffset="5761"
+            endLine="131"
+            endColumn="282"
+            endOffset="6022"/>
+    </incident>
+
+    <incident
+        id="UseCompatTextViewDrawableXml"
+        severity="warning"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <fix-composite
+            description="Set drawableEndCompat=&quot;@android:drawable/arrow_down_float&quot; and Delete drawableEnd">
+            <fix-attribute
+                description="Set drawableEndCompat=&quot;@android:drawable/arrow_down_float&quot;"
+                namespace="http://schemas.android.com/apk/res-auto"
+                attribute="drawableEndCompat"
+                value="@android:drawable/arrow_down_float"/>
+            <fix-attribute
+                description="Delete drawableEnd"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="drawableEnd"/>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="163"
+            column="21"
+            startOffset="7412"
+            endLine="163"
+            endColumn="77"
+            endOffset="7468"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;After Earthquake&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="158"
+            column="21"
+            startOffset="7147"
+            endLine="158"
+            endColumn="52"
+            endOffset="7178"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;• Check for injuries and provide first aid\n• Inspect home for damages\n• Expect aftershocks and be prepared\n• Listen to emergency broadcasts\n• Help injured or trapped people\n• Go to designated evacuation center if necessary&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="176"
+            column="21"
+            startOffset="7979"
+            endLine="176"
+            endColumn="263"
+            endOffset="8221"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="17"
+            column="13"
+            startOffset="585"
+            endLine="17"
+            endColumn="46"
+            endOffset="618"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;EVAT&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="26"
+            column="13"
+            startOffset="925"
+            endLine="26"
+            endColumn="32"
+            endOffset="944"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Evacuation Tracker&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="36"
+            column="13"
+            startOffset="1304"
+            endLine="36"
+            endColumn="46"
+            endOffset="1337"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;About EVAT&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="46"
+            column="13"
+            startOffset="1707"
+            endLine="46"
+            endColumn="38"
+            endOffset="1732"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;EVAT is your comprehensive evacuation tracking companion designed to keep you safe during emergencies in Greater Lagro, Quezon City.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="56"
+            column="13"
+            startOffset="2092"
+            endLine="56"
+            endColumn="160"
+            endOffset="2239"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Key Features&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="67"
+            column="13"
+            startOffset="2646"
+            endLine="67"
+            endColumn="40"
+            endOffset="2673"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;📍 Real-Time Location Tracking&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="85"
+            column="17"
+            startOffset="3366"
+            endLine="85"
+            endColumn="62"
+            endOffset="3411"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;⚠️ Risk-Prone Area Mapping&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="94"
+            column="17"
+            startOffset="3769"
+            endLine="94"
+            endColumn="58"
+            endOffset="3810"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;🏥 Nearest Evacuation Centers&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="103"
+            column="17"
+            startOffset="4168"
+            endLine="103"
+            endColumn="61"
+            endOffset="4212"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;📞 Emergency Hotlines&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="112"
+            column="17"
+            startOffset="4570"
+            endLine="112"
+            endColumn="53"
+            endOffset="4606"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;📋 Safety Guidelines &amp; Protocols&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="120"
+            column="17"
+            startOffset="4913"
+            endLine="120"
+            endColumn="68"
+            endOffset="4964"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Coverage Area&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="131"
+            column="13"
+            startOffset="5327"
+            endLine="131"
+            endColumn="41"
+            endOffset="5355"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Greater Lagro, Quezon City\nMetro Manila, Philippines&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="141"
+            column="13"
+            startOffset="5715"
+            endLine="141"
+            endColumn="81"
+            endOffset="5783"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Stay safe, stay informed, stay prepared with EVAT.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="152"
+            column="13"
+            startOffset="6197"
+            endLine="152"
+            endColumn="78"
+            endOffset="6262"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Hotlines&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="17"
+            column="13"
+            startOffset="610"
+            endLine="17"
+            endColumn="36"
+            endOffset="633"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Quezon City Police Department&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="43"
+            column="21"
+            startOffset="1685"
+            endLine="43"
+            endColumn="65"
+            endOffset="1729"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;(02) 8921-5802&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="53"
+            column="21"
+            startOffset="2162"
+            endLine="53"
+            endColumn="50"
+            endOffset="2191"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Bureau of Fire Protection - QC&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="80"
+            column="21"
+            startOffset="3316"
+            endLine="80"
+            endColumn="66"
+            endOffset="3361"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;(02) 8928-1938&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="90"
+            column="21"
+            startOffset="3794"
+            endLine="90"
+            endColumn="50"
+            endOffset="3823"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Quezon City Red Cross&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="117"
+            column="21"
+            startOffset="4939"
+            endLine="117"
+            endColumn="57"
+            endOffset="4975"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;(02) 8920-3625&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="127"
+            column="21"
+            startOffset="5408"
+            endLine="127"
+            endColumn="50"
+            endOffset="5437"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="34"
+            replacement="36"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="13"
+            column="9"
+            startOffset="235"
+            endLine="13"
+            endColumn="23"
+            endOffset="249"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0">
+        <fix-replace
+            description="Change to 1.17.0"
+            family="Update versions"
+            oldString="1.12.0"
+            replacement="1.17.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="49"
+            column="20"
+            startOffset="1071"
+            endLine="49"
+            endColumn="51"
+            endOffset="1102"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="50"
+            column="20"
+            startOffset="1123"
+            endLine="50"
+            endColumn="56"
+            endOffset="1159"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.13.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="51"
+            column="20"
+            startOffset="1180"
+            endLine="51"
+            endColumn="65"
+            endOffset="1225"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="52"
+            column="20"
+            startOffset="1246"
+            endLine="52"
+            endColumn="70"
+            endOffset="1296"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.2 is available: 1.12.2">
+        <fix-replace
+            description="Change to 1.12.2"
+            family="Update versions"
+            oldString="1.8.2"
+            replacement="1.12.2"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="53"
+            column="20"
+            startOffset="1317"
+            endLine="53"
+            endColumn="58"
+            endOffset="1355"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9">
+        <fix-replace
+            description="Change to 1.8.9"
+            family="Update versions"
+            oldString="1.6.2"
+            replacement="1.8.9"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="54"
+            column="20"
+            startOffset="1376"
+            endLine="54"
+            endColumn="58"
+            endOffset="1414"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-location than 21.1.0 is available: 21.3.0">
+        <fix-replace
+            description="Change to 21.3.0"
+            family="Update versions"
+            oldString="21.1.0"
+            replacement="21.3.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="60"
+            column="20"
+            startOffset="1550"
+            endLine="60"
+            endColumn="74"
+            endOffset="1604"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="63"
+            column="31"
+            startOffset="1682"
+            endLine="63"
+            endColumn="62"
+            endOffset="1713"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="64"
+            column="31"
+            startOffset="1745"
+            endLine="64"
+            endColumn="75"
+            endOffset="1789"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/evat_logo.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/evat_logo.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/evat_logo.png"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.Evat`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="6"
+            column="5"
+            startOffset="295"
+            endLine="6"
+            endColumn="43"
+            endOffset="333"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.Evat`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="6"
+            column="5"
+            startOffset="295"
+            endLine="6"
+            endColumn="43"
+            endOffset="333"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.Evat`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_guidelines.xml"
+            line="7"
+            column="5"
+            startOffset="284"
+            endLine="7"
+            endColumn="43"
+            endOffset="322"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.Evat`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="6"
+            column="5"
+            startOffset="227"
+            endLine="6"
+            endColumn="43"
+            endOffset="265"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.Evat`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_hotlines.xml"
+            line="7"
+            column="5"
+            startOffset="284"
+            endLine="7"
+            endColumn="43"
+            endOffset="322"/>
+    </incident>
+
+</incidents>
