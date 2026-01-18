@@ -84,7 +84,7 @@ class LocationFragment : Fragment() {
         binding.mapView.apply {
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
-            controller.setZoom(15.0)
+            controller.setZoom(18)
             
             // Default to Manila, Philippines
             controller.setCenter(GeoPoint(14.5995, 120.9842))
