@@ -119,7 +119,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\USER\.gradle\cache
 	android:label
 		ADDED from C:\Users\USER\Documents\SYSTEMS\MOBILE\EVAT\app\src\main\AndroidManifest.xml:12:9-29
 	android:roundIcon
-		ADDED from C:\Users\USER\Documents\SYSTEMS\MOBILE\EVAT\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\USER\Documents\SYSTEMS\MOBILE\EVAT\app\src\main\AndroidManifest.xml:13:9-48
 	android:icon
 		ADDED from C:\Users\USER\Documents\SYSTEMS\MOBILE\EVAT\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
