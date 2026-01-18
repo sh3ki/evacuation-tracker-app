@@ -2,7 +2,11 @@
 <resources>
     <color name="accent_yellow">#F2C94C</color>
     <color name="background">#F8FAFD</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="ic_launcher_background">#1976D2</color>
     <color name="nav_icon">#374151</color>
+    <color name="primary">#2E86DE</color>
     <color name="primary_blue">#2E86DE</color>
     <color name="primary_blue_dark">#1F5FA3</color>
     <color name="text_primary">#0F172A</color>
