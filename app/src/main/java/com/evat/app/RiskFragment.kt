@@ -88,44 +88,54 @@ class RiskFragment : Fragment() {
         binding.mapView.apply {
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
-            controller.setZoom(13.0)
+            controller.setZoom(17)
             
-            // Default to Manila, Philippines
-            controller.setCenter(GeoPoint(14.5995, 120.9842))
+            // Center on Greater Lagro, Quezon City
+            controller.setCenter(GeoPoint(14.7257, 121.0795))
         }
     }
     
     private fun addRiskProneAreas() {
-        // Sample risk-prone areas in Metro Manila
+        // Risk-prone areas in Greater Lagro, Quezon City
         val riskAreas = listOf(
             RiskArea(
-                "Flood-Prone Zone: Marikina River",
-                GeoPoint(14.6507, 121.1029),
+                "Flood-Prone: Greater Lagro Creek",
+                GeoPoint(14.7280, 121.0790),
                 listOf(
-                    GeoPoint(14.6607, 121.0929),
-                    GeoPoint(14.6607, 121.1129),
-                    GeoPoint(14.6407, 121.1129),
-                    GeoPoint(14.6407, 121.0929)
+                    GeoPoint(14.7320, 121.0760),
+                    GeoPoint(14.7320, 121.0820),
+                    GeoPoint(14.7240, 121.0820),
+                    GeoPoint(14.7240, 121.0760)
                 )
             ),
             RiskArea(
-                "Landslide Risk: Antipolo Hills",
-                GeoPoint(14.5865, 121.1755),
+                "Flash Flood Risk: Lagro Low-lying Areas",
+                GeoPoint(14.7220, 121.0810),
                 listOf(
-                    GeoPoint(14.5965, 121.1655),
-                    GeoPoint(14.5965, 121.1855),
-                    GeoPoint(14.5765, 121.1855),
-                    GeoPoint(14.5765, 121.1655)
+                    GeoPoint(14.7250, 121.0780),
+                    GeoPoint(14.7250, 121.0840),
+                    GeoPoint(14.7190, 121.0840),
+                    GeoPoint(14.7190, 121.0780)
                 )
             ),
             RiskArea(
-                "Earthquake Fault Line: West Valley",
-                GeoPoint(14.5500, 121.0500),
+                "Landslide Risk: Greater Lagro Slopes",
+                GeoPoint(14.7300, 121.0750),
                 listOf(
-                    GeoPoint(14.5600, 121.0400),
-                    GeoPoint(14.5600, 121.0600),
-                    GeoPoint(14.5400, 121.0600),
-                    GeoPoint(14.5400, 121.0400)
+                    GeoPoint(14.7330, 121.0720),
+                    GeoPoint(14.7330, 121.0780),
+                    GeoPoint(14.7270, 121.0780),
+                    GeoPoint(14.7270, 121.0720)
+                )
+            ),
+            RiskArea(
+                "Drainage-Prone: Commonwealth Ave Junction",
+                GeoPoint(14.7200, 121.0770),
+                listOf(
+                    GeoPoint(14.7230, 121.0740),
+                    GeoPoint(14.7230, 121.0800),
+                    GeoPoint(14.7170, 121.0800),
+                    GeoPoint(14.7170, 121.0740)
                 )
             )
         )
