@@ -4,12 +4,15 @@ package com.evat.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.AutoCompleteTextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.evat.app.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -17,19 +20,34 @@ import org.osmdroid.views.MapView;
 
 public final class FragmentLocationBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final CoordinatorLayout rootView;
+
+  @NonNull
+  public final AutoCompleteTextView evacuationSiteDropdown;
+
+  @NonNull
+  public final TextInputLayout evacuationSiteDropdownLayout;
+
+  @NonNull
+  public final FloatingActionButton fabMyLocation;
 
   @NonNull
   public final MapView mapView;
 
-  private FragmentLocationBinding(@NonNull FrameLayout rootView, @NonNull MapView mapView) {
+  private FragmentLocationBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull AutoCompleteTextView evacuationSiteDropdown,
+      @NonNull TextInputLayout evacuationSiteDropdownLayout,
+      @NonNull FloatingActionButton fabMyLocation, @NonNull MapView mapView) {
     this.rootView = rootView;
+    this.evacuationSiteDropdown = evacuationSiteDropdown;
+    this.evacuationSiteDropdownLayout = evacuationSiteDropdownLayout;
+    this.fabMyLocation = fabMyLocation;
     this.mapView = mapView;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +72,32 @@ public final class FragmentLocationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.evacuationSiteDropdown;
+      AutoCompleteTextView evacuationSiteDropdown = ViewBindings.findChildViewById(rootView, id);
+      if (evacuationSiteDropdown == null) {
+        break missingId;
+      }
+
+      id = R.id.evacuationSiteDropdownLayout;
+      TextInputLayout evacuationSiteDropdownLayout = ViewBindings.findChildViewById(rootView, id);
+      if (evacuationSiteDropdownLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.fabMyLocation;
+      FloatingActionButton fabMyLocation = ViewBindings.findChildViewById(rootView, id);
+      if (fabMyLocation == null) {
+        break missingId;
+      }
+
       id = R.id.mapView;
       MapView mapView = ViewBindings.findChildViewById(rootView, id);
       if (mapView == null) {
         break missingId;
       }
 
-      return new FragmentLocationBinding((FrameLayout) rootView, mapView);
+      return new FragmentLocationBinding((CoordinatorLayout) rootView, evacuationSiteDropdown,
+          evacuationSiteDropdownLayout, fabMyLocation, mapView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
