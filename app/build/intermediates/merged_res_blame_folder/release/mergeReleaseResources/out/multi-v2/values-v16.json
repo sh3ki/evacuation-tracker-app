@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.evat.app-mergeReleaseResources-38:/values-v16/values-v16.xml",
+            "outputFile": "com.evat.app-mergeReleaseResources-39:/values-v16/values-v16.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\e8a21cd347b5632a92ff6ccdf3eb85c7\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
