@@ -1,102 +1,122 @@
 [
     {
-        "merged": "com.evat.app-release-40:/drawable_map_placeholder.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/map_placeholder.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_nav_hotlines.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_nav_hotlines.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_fragment_risk.xml.flat",
-        "source": "com.evat.app-main-41:/layout/fragment_risk.xml"
+        "merged": "com.evat.app-release-41:/layout_fragment_guidelines.xml.flat",
+        "source": "com.evat.app-main-42:/layout/fragment_guidelines.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_bottom_nav_item_background.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/bottom_nav_item_background.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.evat.app-release-41:/layout_activity_main.xml.flat",
+        "source": "com.evat.app-main-42:/layout/activity_main.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_logo_placeholder.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/logo_placeholder.xml"
+        "merged": "com.evat.app-release-41:/color_bottom_nav_text_colors.xml.flat",
+        "source": "com.evat.app-main-42:/color/bottom_nav_text_colors.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.evat.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_my_location.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_my_location.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_nav_home.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_nav_home.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_nav_location.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_nav_location.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_activity_main.xml.flat",
-        "source": "com.evat.app-main-41:/layout/activity_main.xml"
+        "merged": "com.evat.app-release-41:/drawable_location_blue_dot.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/location_blue_dot.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_activity_splash.xml.flat",
-        "source": "com.evat.app-main-41:/layout/activity_splash.xml"
+        "merged": "com.evat.app-release-41:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.evat.app-main-42:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.evat.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.evat.app-release-41:/color_bottom_nav_ripple.xml.flat",
+        "source": "com.evat.app-main-42:/color/bottom_nav_ripple.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_evat_logo.png.flat",
-        "source": "com.evat.app-main-41:/drawable/evat_logo.png"
+        "merged": "com.evat.app-release-41:/layout_item_evacuation_image.xml.flat",
+        "source": "com.evat.app-main-42:/layout/item_evacuation_image.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_nav_guidelines.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_nav_guidelines.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_nav_risk.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_nav_risk.xml"
+        "merged": "com.evat.app-release-41:/color_bottom_nav_icon_colors.xml.flat",
+        "source": "com.evat.app-main-42:/color/bottom_nav_icon_colors.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_fragment_location.xml.flat",
-        "source": "com.evat.app-main-41:/layout/fragment_location.xml"
+        "merged": "com.evat.app-release-41:/layout_bottom_sheet_evacuation_details.xml.flat",
+        "source": "com.evat.app-main-42:/layout/bottom_sheet_evacuation_details.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_fragment_hotlines.xml.flat",
-        "source": "com.evat.app-main-41:/layout/fragment_hotlines.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_nav_guidelines.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_nav_guidelines.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/color_bottom_nav_text_colors.xml.flat",
-        "source": "com.evat.app-main-41:/color/bottom_nav_text_colors.xml"
+        "merged": "com.evat.app-release-41:/drawable_location_pulse.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/location_pulse.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/menu_bottom_nav.xml.flat",
-        "source": "com.evat.app-main-41:/menu/bottom_nav.xml"
+        "merged": "com.evat.app-release-41:/layout_fragment_home.xml.flat",
+        "source": "com.evat.app-main-42:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/color_bottom_nav_ripple.xml.flat",
-        "source": "com.evat.app-main-41:/color/bottom_nav_ripple.xml"
+        "merged": "com.evat.app-release-41:/layout_fragment_location.xml.flat",
+        "source": "com.evat.app-main-42:/layout/fragment_location.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_launcher_background.xml"
+        "merged": "com.evat.app-release-41:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.evat.app-main-42:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_nav_location.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_nav_location.xml"
+        "merged": "com.evat.app-release-41:/drawable_ic_nav_home.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_nav_home.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_location_pulse.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/location_pulse.xml"
+        "merged": "com.evat.app-release-41:/layout_fragment_hotlines.xml.flat",
+        "source": "com.evat.app-main-42:/layout/fragment_hotlines.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/color_bottom_nav_icon_colors.xml.flat",
-        "source": "com.evat.app-main-41:/color/bottom_nav_icon_colors.xml"
+        "merged": "com.evat.app-release-41:/drawable_map_placeholder.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/map_placeholder.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_fragment_home.xml.flat",
-        "source": "com.evat.app-main-41:/layout/fragment_home.xml"
+        "merged": "com.evat.app-release-41:/drawable_evat_logo.png.flat",
+        "source": "com.evat.app-main-42:/drawable/evat_logo.png"
     },
     {
-        "merged": "com.evat.app-release-40:/drawable_ic_nav_hotlines.xml.flat",
-        "source": "com.evat.app-main-41:/drawable/ic_nav_hotlines.xml"
+        "merged": "com.evat.app-release-41:/layout_fragment_risk.xml.flat",
+        "source": "com.evat.app-main-42:/layout/fragment_risk.xml"
     },
     {
-        "merged": "com.evat.app-release-40:/layout_fragment_guidelines.xml.flat",
-        "source": "com.evat.app-main-41:/layout/fragment_guidelines.xml"
+        "merged": "com.evat.app-release-41:/layout_activity_splash.xml.flat",
+        "source": "com.evat.app-main-42:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.evat.app-release-41:/drawable_ic_nav_risk.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_nav_risk.xml"
+    },
+    {
+        "merged": "com.evat.app-release-41:/menu_bottom_nav.xml.flat",
+        "source": "com.evat.app-main-42:/menu/bottom_nav.xml"
+    },
+    {
+        "merged": "com.evat.app-release-41:/drawable_ic_evacuation_marker.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/ic_evacuation_marker.xml"
+    },
+    {
+        "merged": "com.evat.app-release-41:/drawable_logo_placeholder.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/logo_placeholder.xml"
+    },
+    {
+        "merged": "com.evat.app-release-41:/drawable_bottom_nav_item_background.xml.flat",
+        "source": "com.evat.app-main-42:/drawable/bottom_nav_item_background.xml"
     }
 ]
