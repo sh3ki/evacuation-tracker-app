@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 68 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 82 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Jan 17 18:38:16 PST 2026 by AGP (8.5.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Jan 24 15:47:04 PST 2026 by AGP (8.5.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -188,16 +188,18 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
       <a class="mdl-navigation__link" href="#CustomSplashScreen"><i class="material-icons warning-icon">warning</i>Application-defined Launch Screen (1)</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (9)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (11)</a>
       <a class="mdl-navigation__link" href="#LockedOrientationActivity"><i class="material-icons warning-icon">warning</i>Incompatible screenOrientation value (2)</a>
       <a class="mdl-navigation__link" href="#DiscouragedApi"><i class="material-icons warning-icon">warning</i>Using discouraged APIs (2)</a>
       <a class="mdl-navigation__link" href="#UseCompatTextViewDrawableXml"><i class="material-icons warning-icon">warning</i>Compat compound drawable attributes should be used on <code>TextView</code> (3)</a>
       <a class="mdl-navigation__link" href="#UseCompoundDrawables"><i class="material-icons warning-icon">warning</i>Node can be replaced by a <code>TextView</code> with compound drawables (1)</a>
-      <a class="mdl-navigation__link" href="#Overdraw"><i class="material-icons warning-icon">warning</i>Overdraw: Painting regions more than once (5)</a>
-      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (10)</a>
+      <a class="mdl-navigation__link" href="#Overdraw"><i class="material-icons warning-icon">warning</i>Overdraw: Painting regions more than once (6)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (9)</a>
       <a class="mdl-navigation__link" href="#IconLauncherShape"><i class="material-icons warning-icon">warning</i>The launcher icon shape should use a distinct silhouette (1)</a>
       <a class="mdl-navigation__link" href="#IconLocation"><i class="material-icons warning-icon">warning</i>Image defined in density-independent drawable folder (1)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (32)</a>
+      <a class="mdl-navigation__link" href="#LabelFor"><i class="material-icons warning-icon">warning</i>Missing accessibility label (1)</a>
+      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (3)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (40)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -219,7 +221,7 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#CustomSplashScreen">CustomSplashScreen</a>: Application-defined Launch Screen</td></tr>
 <tr>
-<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">11</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -236,10 +238,10 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UseCompoundDrawables">UseCompoundDrawables</a>: Node can be replaced by a <code>TextView</code> with compound drawables</td></tr>
 <tr>
-<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">6</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#Overdraw">Overdraw</a>: Overdraw: Painting regions more than once</td></tr>
 <tr>
-<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
 </td></tr>
@@ -249,10 +251,18 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#IconLocation">IconLocation</a>: Image defined in density-independent drawable folder</td></tr>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#LabelFor">LabelFor</a>: Missing accessibility label</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">32</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
+<tr>
+<td class="countColumn">40</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (28)</a>
 </td></tr>
@@ -420,7 +430,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 56 </span>    // OpenStreetMap
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="GradleDependencyDivLink" onclick="reveal('GradleDependencyDiv');" />+ 4 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="GradleDependencyDivLink" onclick="reveal('GradleDependencyDiv');" />+ 6 More Occurrences...</button>
 <div id="GradleDependencyDiv" style="display: none">
 <span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:54</span>: <span class="message">A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9</span><br /><pre class="errorlines">
 <span class="lineno"> 51 </span>    implementation("com.google.android.material:material:1.11.0")
@@ -437,26 +447,46 @@ Dismiss</button>            </div>
 <span class="lineno"> 58 </span>    
 <span class="lineno"> 59 </span>    // Location Services
 <span class="caretline"><span class="lineno"> 60 </span>    implementation(<span class="warning">"com.google.android.gms:play-services-location:21.1.0"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 61 </span>
-<span class="lineno"> 62 </span>    testImplementation("junit:junit:4.13.2")
-<span class="lineno"> 63 </span>    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+<span class="lineno"> 61 </span>    
+<span class="lineno"> 62 </span>    // Image Loading - Glide
+<span class="lineno"> 63 </span>    implementation("com.github.bumptech.glide:glide:4.16.0")
 </pre>
 
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:63</span>: <span class="message">A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0</span><br /><pre class="errorlines">
-<span class="lineno"> 60 </span>    implementation("com.google.android.gms:play-services-location:21.1.0")
-<span class="lineno"> 61 </span>
-<span class="lineno"> 62 </span>    testImplementation("junit:junit:4.13.2")
-<span class="caretline"><span class="lineno"> 63 </span>    androidTestImplementation(<span class="warning">"androidx.test.ext:junit:1.1.5"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 64 </span>    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-<span class="lineno"> 65 </span>}
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:66</span>: <span class="message">A newer version of androidx.viewpager2:viewpager2 than 1.0.0 is available: 1.1.0</span><br /><pre class="errorlines">
+<span class="lineno"> 63 </span>    implementation("com.github.bumptech.glide:glide:4.16.0")
+<span class="lineno"> 64 </span>    
+<span class="lineno"> 65 </span>    // ViewPager2
+<span class="caretline"><span class="lineno"> 66 </span>    implementation(<span class="warning">"androidx.viewpager2:viewpager2:1.0.0"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 67 </span>    
+<span class="lineno"> 68 </span>    // CoordinatorLayout
+<span class="lineno"> 69 </span>    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 </pre>
 
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:64</span>: <span class="message">A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0</span><br /><pre class="errorlines">
-<span class="lineno"> 61 </span>
-<span class="lineno"> 62 </span>    testImplementation("junit:junit:4.13.2")
-<span class="lineno"> 63 </span>    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-<span class="caretline"><span class="lineno"> 64 </span>    androidTestImplementation(<span class="warning">"androidx.test.espresso:espresso-core:3.5.1"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 65 </span>}
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:69</span>: <span class="message">A newer version of androidx.coordinatorlayout:coordinatorlayout than 1.2.0 is available: 1.3.0</span><br /><pre class="errorlines">
+<span class="lineno"> 66 </span>    implementation("androidx.viewpager2:viewpager2:1.0.0")
+<span class="lineno"> 67 </span>    
+<span class="lineno"> 68 </span>    // CoordinatorLayout
+<span class="caretline"><span class="lineno"> 69 </span>    implementation(<span class="warning">"androidx.coordinatorlayout:coordinatorlayout:1.2.0"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 70 </span>
+<span class="lineno"> 71 </span>    testImplementation("junit:junit:4.13.2")
+<span class="lineno"> 72 </span>    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+</pre>
+
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:72</span>: <span class="message">A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0</span><br /><pre class="errorlines">
+<span class="lineno"> 69 </span>    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+<span class="lineno"> 70 </span>
+<span class="lineno"> 71 </span>    testImplementation("junit:junit:4.13.2")
+<span class="caretline"><span class="lineno"> 72 </span>    androidTestImplementation(<span class="warning">"androidx.test.ext:junit:1.1.5"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 73 </span>    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+<span class="lineno"> 74 </span>}
+</pre>
+
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:73</span>: <span class="message">A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0</span><br /><pre class="errorlines">
+<span class="lineno"> 70 </span>
+<span class="lineno"> 71 </span>    testImplementation("junit:junit:4.13.2")
+<span class="lineno"> 72 </span>    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+<span class="caretline"><span class="lineno"> 73 </span>    androidTestImplementation(<span class="warning">"androidx.test.espresso:espresso-core:3.5.1"</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 74 </span>}
 </pre>
 
 </div>
@@ -749,6 +779,16 @@ Dismiss</button>            </div>
 </span><span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/logoImage"</span>
 </pre>
 
+<span class="location"><a href="../../src/main/res/layout/bottom_sheet_evacuation_details.xml">../../src/main/res/layout/bottom_sheet_evacuation_details.xml</a>:8</span>: <span class="message">Possible overdraw: Root element paints background <code>@android:color/white</code> with a theme that also paints a background (inferred theme is <code>@style/Theme.Evat</code>)</span><br /><pre class="errorlines">
+<span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  6 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  7 </span>    <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
+<span class="caretline"><span class="lineno">  8 </span>    <span class="warning"><span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@android:color/white"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  9 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 10 </span>    <span class="prefix">app:</span><span class="attribute">behavior_hideable</span>=<span class="value">"true"</span>
+<span class="lineno"> 11 </span>    <span class="prefix">app:</span><span class="attribute">behavior_peekHeight</span>=<span class="value">"0dp"</span>
+</pre>
+
 <span class="location"><a href="../../src/main/res/layout/fragment_guidelines.xml">../../src/main/res/layout/fragment_guidelines.xml</a>:7</span>: <span class="message">Possible overdraw: Root element paints background <code>@color/background</code> with a theme that also paints a background (inferred theme is <code>@style/Theme.Evat</code>)</span><br /><pre class="errorlines">
 <span class="lineno">   4 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
 <span class="lineno">   5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
@@ -859,7 +899,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 5 </span>        <span class="prefix">android:</span><span class="attribute">height</span>=<span class="value">"72dp"</span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 5 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 4 More Occurrences...</button>
 <div id="UnusedResourcesDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">../../src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml</a>:2</span>: <span class="message">The resource <code>R.mipmap.ic_launcher_round</code> appears to be unused</span><br /><pre class="errorlines">
 <span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
@@ -875,14 +915,6 @@ Dismiss</button>            </div>
 <span class="lineno">  3 </span>    <span class="tag">&lt;corners</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">radius</span>=<span class="value">"24dp"</span> />
 <span class="lineno">  4 </span>    <span class="tag">&lt;gradient</span><span class="attribute">
 </span><span class="lineno">  5 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">startColor</span>=<span class="value">"#4DB1E2"</span>
-</pre>
-
-<span class="location"><a href="../../src/main/res/drawable/map_placeholder.xml">../../src/main/res/drawable/map_placeholder.xml</a>:2</span>: <span class="message">The resource <code>R.drawable.map_placeholder</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="caretline"><span class="lineno"> 2 </span><span class="warning"><span class="tag">&lt;shape</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span> <span class="prefix">android:</span><span class="attribute">shape</span>=<span class="value">"rectangle"</span>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 3 </span>    <span class="tag">&lt;solid</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">color</span>=<span class="value">"#E6EEF5"</span> />
-<span class="lineno"> 4 </span>    <span class="tag">&lt;corners</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">radius</span>=<span class="value">"16dp"</span> />
-<span class="lineno"> 5 </span>    <span class="tag">&lt;padding</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">left</span>=<span class="value">"12dp"</span> <span class="prefix">android:</span><span class="attribute">top</span>=<span class="value">"12dp"</span> <span class="prefix">android:</span><span class="attribute">right</span>=<span class="value">"12dp"</span> <span class="prefix">android:</span><span class="attribute">bottom</span>=<span class="value">"12dp"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:3</span>: <span class="message">The resource <code>R.string.app_name</code> appears to be unused</span><br /><pre class="errorlines">
@@ -1020,8 +1052,129 @@ Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id
 Dismiss</button>            </div>
             </div>
           </section>
+<a name="Accessibility"></a>
+<a name="LabelFor"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="LabelForCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Missing accessibility label</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/fragment_location.xml">../../src/main/res/layout/fragment_location.xml</a>:28</span>: <span class="message">Missing accessibility label: provide either a view with an <code>android:labelFor</code> that references this view or provide an <code>android:hint</code></span><br /><pre class="errorlines">
+<span class="lineno"> 25 </span>     <span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Select Evacuation Site"</span>
+<span class="lineno"> 26 </span>     <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"</span>>
+<span class="lineno"> 27 </span>
+<span class="caretline"><span class="lineno"> 28 </span>     <span class="tag">&lt;</span><span class="warning"><span class="tag">AutoCompleteTextView</span></span><span class="attribute"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno"> 29 </span><span class="attribute">         </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/evacuationSiteDropdown"</span>
+<span class="lineno"> 30 </span>         <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 31 </span>         <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationLabelFor" style="display: none;">
+Editable text fields should provide an <code>android:hint</code> or, provided your <code>minSdkVersion</code> is at least 17, they may be referenced by a view with a <code>android:labelFor</code> attribute.<br/>
+<br/>
+When using <code>android:labelFor</code>, be sure to provide an <code>android:text</code> or an <code>android:contentDescription</code>.<br/>
+<br/>
+If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "LabelFor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">LabelFor</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Accessibility</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 2/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationLabelForLink" onclick="reveal('explanationLabelFor');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="LabelForCardLink" onclick="hideid('LabelForCard');">
+Dismiss</button>            </div>
+            </div>
+          </section>
 <a name="Internationalization"></a>
-<a name="HardcodedText"></a>
+<a name="SetTextI18n"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="SetTextI18nCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">TextView Internationalization</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/evat/app/LocationFragment.kt">../../src/main/java/com/evat/app/LocationFragment.kt</a>:262</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 259 </span>  
+<span class="lineno"> 260 </span>  <span class="comment">// Setup image indicator</span>
+<span class="lineno"> 261 </span>  <span class="keyword">val</span> tvImageIndicator = bottomSheet.findViewById&lt;TextView>(R.id.tvImageIndicator)
+<span class="caretline"><span class="lineno"> 262 </span>  tvImageIndicator.text = <span class="warning"><span class="string">"1 / ${</span>center.imageUrls.size<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 263 </span>  
+<span class="lineno"> 264 </span>  imageViewPager.registerOnPageChangeCallback(<span class="keyword">object</span> : ViewPager2.OnPageChangeCallback() {
+<span class="lineno"> 265 </span>      override <span class="keyword">fun</span> onPageSelected(position: Int) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/evat/app/LocationFragment.kt">../../src/main/java/com/evat/app/LocationFragment.kt</a>:267</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 264 </span>  imageViewPager.registerOnPageChangeCallback(<span class="keyword">object</span> : ViewPager2.OnPageChangeCallback() {
+<span class="lineno"> 265 </span>      override <span class="keyword">fun</span> onPageSelected(position: Int) {
+<span class="lineno"> 266 </span>          <span class="keyword">super</span>.onPageSelected(position)
+<span class="caretline"><span class="lineno"> 267 </span>          tvImageIndicator.text = <span class="warning"><span class="string">"${</span>position + <span class="number">1</span><span class="string">} / ${</span>center.imageUrls.size<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 268 </span>      }
+<span class="lineno"> 269 </span>  })
+<span class="lineno"> 270 </span>  
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/evat/app/LocationFragment.kt">../../src/main/java/com/evat/app/LocationFragment.kt</a>:267</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 264 </span>  imageViewPager.registerOnPageChangeCallback(<span class="keyword">object</span> : ViewPager2.OnPageChangeCallback() {
+<span class="lineno"> 265 </span>      override <span class="keyword">fun</span> onPageSelected(position: Int) {
+<span class="lineno"> 266 </span>          <span class="keyword">super</span>.onPageSelected(position)
+<span class="caretline"><span class="lineno"> 267 </span>          tvImageIndicator.text = <span class="string">"${</span><span class="warning">position + <span class="number">1</span></span><span class="string">} / ${</span>center.imageUrls.size<span class="string">}"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 268 </span>      }
+<span class="lineno"> 269 </span>  })
+<span class="lineno"> 270 </span>  
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationSetTextI18n" style="display: none;">
+When calling <code>TextView#setText</code><br/>
+* Never call <code>Number#toString()</code> to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using <code>String#format</code> with proper format specifications (<code>%d</code> or <code>%f</code>) instead.<br/>
+* Do not pass a string literal (e.g. "Hello") to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.<br/>
+* Do not build messages by concatenating text chunks. Such messages can not be properly translated.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/guide/topics/resources/localization.html">https://developer.android.com/guide/topics/resources/localization.html</a>
+</div>To suppress this error, use the issue id "SetTextI18n" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">SetTextI18n</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Internationalization</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSetTextI18nLink" onclick="reveal('explanationSetTextI18n');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SetTextI18nCardLink" onclick="hideid('SetTextI18nCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="HardcodedText"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="HardcodedTextCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -1048,6 +1201,58 @@ Dismiss</button>            </div>
 <span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">scaleType</span>=<span class="value">"fitCenter"</span>
 <span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/evat_logo"</span>
 <span class="lineno"> 16 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/bottom_sheet_evacuation_details.xml">../../src/main/res/layout/bottom_sheet_evacuation_details.xml</a>:28</span>: <span class="message">Hardcoded string "Evacuation Center Name", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 25 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/tvEvacuationName"</span>
+<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 28 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Evacuation Center Name"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 29 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
+<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span>
+<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/bottom_sheet_evacuation_details.xml">../../src/main/res/layout/bottom_sheet_evacuation_details.xml</a>:47</span>: <span class="message">Hardcoded string "1 / 3", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 46 </span>        <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"center_horizontal"</span>
+<span class="caretline"><span class="lineno"> 47 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"1 / 3"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 48 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"12sp"</span>
+<span class="lineno"> 49 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"#666666"</span>
+<span class="lineno"> 50 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span>/>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/bottom_sheet_evacuation_details.xml">../../src/main/res/layout/bottom_sheet_evacuation_details.xml</a>:56</span>: <span class="message">Hardcoded string "Address", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 53 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 54 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 56 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Address"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 57 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"14sp"</span>
+<span class="lineno"> 58 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span>
+<span class="lineno"> 59 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>
+</pre>
+
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 35 More Occurrences...</button>
+<div id="HardcodedTextDiv" style="display: none">
+<span class="location"><a href="../../src/main/res/layout/bottom_sheet_evacuation_details.xml">../../src/main/res/layout/bottom_sheet_evacuation_details.xml</a>:66</span>: <span class="message">Hardcoded string "Address will be displayed here", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 63 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/tvEvacuationAddress"</span>
+<span class="lineno"> 64 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 65 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 66 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Address will be displayed here"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"14sp"</span>
+<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"#666666"</span>
+<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span>/>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/bottom_sheet_evacuation_details.xml">../../src/main/res/layout/bottom_sheet_evacuation_details.xml</a>:76</span>: <span class="message">Hardcoded string "Get Directions", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 73 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/btnGetDirections"</span>
+<span class="lineno"> 74 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 75 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 76 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Get Directions"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 77 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/white"</span>
+<span class="lineno"> 78 </span>        <span class="prefix">app:</span><span class="attribute">backgroundTint</span>=<span class="value">"#4A90E2"</span>
+<span class="lineno"> 79 </span>        <span class="prefix">app:</span><span class="attribute">cornerRadius</span>=<span class="value">"8dp"</span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/fragment_guidelines.xml">../../src/main/res/layout/fragment_guidelines.xml</a>:25</span>: <span class="message">Hardcoded string "Guidelines Icon", should use <code>@string</code> resource</span><br /><pre class="errorlines">
@@ -1080,8 +1285,6 @@ Dismiss</button>            </div>
 <span class="lineno">  45 </span>            <span class="prefix">android:</span><span class="attribute">fontFamily</span>=<span class="value">"sans-serif-medium"</span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 27 More Occurrences...</button>
-<div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/fragment_guidelines.xml">../../src/main/res/layout/fragment_guidelines.xml</a>:68</span>: <span class="message">Hardcoded string "Before Earthquake", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  65 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
 </span><span class="lineno">  66 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
@@ -1350,6 +1553,33 @@ Dismiss</button>            </div>
 <span class="lineno"> 128 </span>                    <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span>
 <span class="lineno"> 129 </span>                    <span class="prefix">android:</span><span class="attribute">fontFamily</span>=<span class="value">"sans-serif-medium"</span>
 <span class="lineno"> 130 </span>                    <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@color/primary"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/fragment_location.xml">../../src/main/res/layout/fragment_location.xml</a>:25</span>: <span class="message">Hardcoded string "Select Evacuation Site", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 22 </span><span class="attribute">     </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/evacuationSiteDropdownLayout"</span>
+<span class="lineno"> 23 </span>     <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 24 </span>     <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 25 </span>     <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Select Evacuation Site"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 26 </span>     <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"</span>>
+<span class="lineno"> 27 </span>
+<span class="lineno"> 28 </span>     <span class="tag">&lt;AutoCompleteTextView</span><span class="attribute">
+</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/fragment_location.xml">../../src/main/res/layout/fragment_location.xml</a>:47</span>: <span class="message">Hardcoded string "My Location", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"bottom|end"</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">layout_margin</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 46 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"90dp"</span>
+<span class="caretline"><span class="lineno"> 47 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">contentDescription</span>=<span class="value">"My Location"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 48 </span>        <span class="prefix">app:</span><span class="attribute">srcCompat</span>=<span class="value">"@drawable/ic_my_location"</span>
+<span class="lineno"> 49 </span>        <span class="prefix">app:</span><span class="attribute">tint</span>=<span class="value">"@android:color/white"</span>
+<span class="lineno"> 50 </span>        <span class="prefix">app:</span><span class="attribute">backgroundTint</span>=<span class="value">"#4A90E2"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/item_evacuation_image.xml">../../src/main/res/layout/item_evacuation_image.xml</a>:7</span>: <span class="message">Hardcoded string "Evacuation center image", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 4 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 6 </span>    <span class="prefix">android:</span><span class="attribute">scaleType</span>=<span class="value">"centerCrop"</span>
+<span class="caretline"><span class="lineno"> 7 </span>    <span class="warning"><span class="prefix">android:</span><span class="attribute">contentDescription</span>=<span class="value">"Evacuation center image"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </pre>
 
 </div>
