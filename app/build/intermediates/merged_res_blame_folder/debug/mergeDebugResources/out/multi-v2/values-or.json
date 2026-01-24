@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.evat.app-mergeDebugResources-38:/values-or/values-or.xml",
+            "outputFile": "com.evat.app-mergeDebugResources-39:/values-or/values-or.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\888452aa4e2b47ab1c7abe839e423920\\transformed\\appcompat-1.6.1\\res\\values-or\\values-or.xml",
