@@ -1,30 +1,42 @@
 [
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/fragment_home.xml",
-        "source": "com.evat.app-main-42:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\fragment_location.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\fragment_location.xml"
     },
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/fragment_hotlines.xml",
-        "source": "com.evat.app-main-42:/layout/fragment_hotlines.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\fragment_guidelines.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\fragment_guidelines.xml"
     },
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/activity_main.xml",
-        "source": "com.evat.app-main-42:/layout/activity_main.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\bottom_sheet_evacuation_details.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\bottom_sheet_evacuation_details.xml"
     },
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/fragment_guidelines.xml",
-        "source": "com.evat.app-main-42:/layout/fragment_guidelines.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/fragment_risk.xml",
-        "source": "com.evat.app-main-42:/layout/fragment_risk.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\item_evacuation_image.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\item_evacuation_image.xml"
     },
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/activity_splash.xml",
-        "source": "com.evat.app-main-42:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\fragment_hotlines.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\fragment_hotlines.xml"
     },
     {
-        "merged": "com.evat.app-mergeDebugResources-39:/layout/fragment_location.xml",
-        "source": "com.evat.app-main-42:/layout/fragment_location.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\fragment_risk.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\fragment_risk.xml"
+    },
+    {
+        "merged": "com.evat.app-mergeDebugResources-40:/layout/fragment_risk.xml",
+        "source": "com.evat.app-main-43:/layout/fragment_risk.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-mergeDebugResources-40:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.7\\com.evat.app-main-43:\\layout\\fragment_home.xml"
     }
 ]
