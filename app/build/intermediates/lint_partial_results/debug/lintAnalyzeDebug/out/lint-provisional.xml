@@ -212,6 +212,28 @@
     </incident>
 
     <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_location.xml"
+            line="28"
+            column="14"
+            startOffset="1157"
+            endLine="28"
+            endColumn="34"
+            endOffset="1177"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
         id="CustomSplashScreen"
         severity="warning"
         message="The application should not provide its own launch screen">
