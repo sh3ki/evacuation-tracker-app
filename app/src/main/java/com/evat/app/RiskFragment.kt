@@ -76,6 +76,7 @@ class RiskFragment : Fragment() {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
         
         setupMap()
+        setupMyLocationButton()
         addRiskProneAreas()
         
         // Check location settings when fragment opens
@@ -88,10 +89,59 @@ class RiskFragment : Fragment() {
         binding.mapView.apply {
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
-            controller.setZoom(17)
+            controller.setZoom(18)
             
             // Center on Greater Lagro, Quezon City
-            controller.setCenter(GeoPoint(14.7257, 121.0795))
+            controller.setCenter(GeoPoint(14.7176, 121.0664))
+        }
+    }
+    
+    private fun setupMyLocationButton() {
+        binding.fabMyLocation.setOnClickListener {
+            centerMapOnCurrentLocation()
+        }
+    }
+    
+    private fun centerMapOnCurrentLocation() {
+        if (!hasLocationPermissions()) {
+            requestLocationPermissions()
+            return
+        }
+        
+        try {
+            val cancellationTokenSource = CancellationTokenSource()
+            fusedLocationClient.getCurrentLocation(
+                Priority.PRIORITY_HIGH_ACCURACY,
+                cancellationTokenSource.token
+            ).addOnSuccessListener { location ->
+                location?.let {
+                    val userLocation = GeoPoint(it.latitude, it.longitude)
+                    binding.mapView.controller.animateTo(userLocation)
+                    Toast.makeText(
+                        requireContext(),
+                        "Centered on your location",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } ?: run {
+                    Toast.makeText(
+                        requireContext(),
+                        "Unable to get current location",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }.addOnFailureListener {
+                Toast.makeText(
+                    requireContext(),
+                    "Failed to get location",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        } catch (e: SecurityException) {
+            Toast.makeText(
+                requireContext(),
+                "Location permission required",
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
     
@@ -99,43 +149,33 @@ class RiskFragment : Fragment() {
         // Risk-prone areas in Greater Lagro, Quezon City
         val riskAreas = listOf(
             RiskArea(
-                "Flood-Prone: Greater Lagro Creek",
-                GeoPoint(14.7280, 121.0790),
+                "Risk Area: Lagro Subdivision",
+                GeoPoint(14.7205, 121.0653),
                 listOf(
-                    GeoPoint(14.7320, 121.0760),
-                    GeoPoint(14.7320, 121.0820),
-                    GeoPoint(14.7240, 121.0820),
-                    GeoPoint(14.7240, 121.0760)
+                    GeoPoint(14.7225, 121.0633),
+                    GeoPoint(14.7225, 121.0673),
+                    GeoPoint(14.7185, 121.0673),
+                    GeoPoint(14.7185, 121.0633)
                 )
             ),
             RiskArea(
-                "Flash Flood Risk: Lagro Low-lying Areas",
-                GeoPoint(14.7220, 121.0810),
+                "Risk Area: Lagro Dulo Park",
+                GeoPoint(14.7187, 121.0661),
                 listOf(
-                    GeoPoint(14.7250, 121.0780),
-                    GeoPoint(14.7250, 121.0840),
-                    GeoPoint(14.7190, 121.0840),
-                    GeoPoint(14.7190, 121.0780)
+                    GeoPoint(14.7207, 121.0641),
+                    GeoPoint(14.7207, 121.0681),
+                    GeoPoint(14.7167, 121.0681),
+                    GeoPoint(14.7167, 121.0641)
                 )
             ),
             RiskArea(
-                "Landslide Risk: Greater Lagro Slopes",
-                GeoPoint(14.7300, 121.0750),
+                "Risk Area: Ascencion Avenue",
+                GeoPoint(14.7142, 121.0671),
                 listOf(
-                    GeoPoint(14.7330, 121.0720),
-                    GeoPoint(14.7330, 121.0780),
-                    GeoPoint(14.7270, 121.0780),
-                    GeoPoint(14.7270, 121.0720)
-                )
-            ),
-            RiskArea(
-                "Drainage-Prone: Commonwealth Ave Junction",
-                GeoPoint(14.7200, 121.0770),
-                listOf(
-                    GeoPoint(14.7230, 121.0740),
-                    GeoPoint(14.7230, 121.0800),
-                    GeoPoint(14.7170, 121.0800),
-                    GeoPoint(14.7170, 121.0740)
+                    GeoPoint(14.7162, 121.0651),
+                    GeoPoint(14.7162, 121.0691),
+                    GeoPoint(14.7122, 121.0691),
+                    GeoPoint(14.7122, 121.0651)
                 )
             )
         )
@@ -217,24 +257,38 @@ class RiskFragment : Fragment() {
         if (!hasLocationPermissions()) return
         
         try {
-            // Add location overlay with custom pulse icon
+            // Add location overlay with BLUE DOT icon
             locationOverlay = MyLocationNewOverlay(GpsMyLocationProvider(requireContext()), binding.mapView)
             locationOverlay?.apply {
                 enableMyLocation()
-                val icon = ContextCompat.getDrawable(requireContext(), R.drawable.location_pulse)
-                icon?.let { setPersonIcon(drawableToBitmap(it)) }
+                val blueDotIcon = ContextCompat.getDrawable(requireContext(), R.drawable.location_blue_dot)
+                blueDotIcon?.let {
+                    val bitmap = drawableToBitmap(it)
+                    setPersonIcon(bitmap)
+                    setDirectionIcon(bitmap)
+                }
+                enableFollowLocation()
             }
             binding.mapView.overlays.add(locationOverlay)
             
-            // Get current location and center map
-            val cancellationTokenSource = CancellationTokenSource()
-            fusedLocationClient.getCurrentLocation(
-                Priority.PRIORITY_HIGH_ACCURACY,
-                cancellationTokenSource.token
-            ).addOnSuccessListener { location ->
+            // Try to get last known location first (faster)
+            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
                 location?.let {
                     val userLocation = GeoPoint(it.latitude, it.longitude)
                     binding.mapView.controller.animateTo(userLocation)
+                    return@addOnSuccessListener
+                }
+                
+                // If no last known location, get current location
+                val cancellationTokenSource = CancellationTokenSource()
+                fusedLocationClient.getCurrentLocation(
+                    Priority.PRIORITY_BALANCED_POWER_ACCURACY,
+                    cancellationTokenSource.token
+                ).addOnSuccessListener { currentLocation ->
+                    currentLocation?.let {
+                        val userLocation = GeoPoint(it.latitude, it.longitude)
+                        binding.mapView.controller.animateTo(userLocation)
+                    }
                 }
             }
         } catch (e: SecurityException) {
