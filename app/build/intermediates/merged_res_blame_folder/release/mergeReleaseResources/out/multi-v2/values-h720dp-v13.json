@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.evat.app-mergeReleaseResources-38:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.evat.app-mergeReleaseResources-39:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\888452aa4e2b47ab1c7abe839e423920\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
