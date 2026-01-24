@@ -58,6 +58,15 @@ dependencies {
     
     // Location Services
     implementation("com.google.android.gms:play-services-location:21.1.0")
+    
+    // Image Loading - Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    
+    // ViewPager2
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    
+    // CoordinatorLayout
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
