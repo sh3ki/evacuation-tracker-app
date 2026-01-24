@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer pulse circle (semi-transparent blue) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#404A90E2" />
+            <size
+                android:width="60dp"
+                android:height="60dp" />
+        </shape>
+    </item>
+    <!-- Middle circle (more opaque blue) -->
+    <item
+        android:top="10dp"
+        android:bottom="10dp"
+        android:left="10dp"
+        android:right="10dp">
+        <shape android:shape="oval">
+            <solid android:color="#804A90E2" />
+            <size
+                android:width="40dp"
+                android:height="40dp" />
+        </shape>
+    </item>
+    <!-- Inner solid circle (bright blue) -->
+    <item
+        android:top="16dp"
+        android:bottom="16dp"
+        android:left="16dp"
+        android:right="16dp">
+        <shape android:shape="oval">
+            <solid android:color="#4A90E2" />
+            <stroke android:width="3dp" android:color="#FFFFFF" />
+            <size
+                android:width="28dp"
+                android:height="28dp" />
+        </shape>
+    </item>
+</layer-list>
