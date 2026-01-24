@@ -3047,6 +3047,8 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_evacuation_marker
+drawable ic_evacuation_marker_selected
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -3061,12 +3063,14 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_my_location
 drawable ic_nav_guidelines
 drawable ic_nav_home
 drawable ic_nav_hotlines
 drawable ic_nav_location
 drawable ic_nav_risk
 drawable ic_search_black_24
+drawable location_blue_dot
 drawable location_pulse
 drawable logo_placeholder
 drawable m3_avd_hide_password
@@ -3260,10 +3264,12 @@ id bestChoice
 id blocking
 id bottom
 id bottomNav
+id bottomSheet
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnGetDirections
 id bubble_description
 id bubble_image
 id bubble_moreinfo
@@ -3351,9 +3357,12 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id evacuationSiteDropdown
+id evacuationSiteDropdownLayout
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabMyLocation
 id fade
 id fill
 id fill_horizontal
@@ -3374,6 +3383,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3396,6 +3406,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
+id imageViewPager
 id immediateStop
 id included
 id indeterminate
@@ -3659,6 +3671,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvEvacuationAddress
+id tvEvacuationName
+id tvImageIndicator
 id unchecked
 id uniform
 id unlabeled
@@ -3801,6 +3816,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_splash
 layout bonuspack_bubble
+layout bottom_sheet_evacuation_details
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3824,6 +3840,7 @@ layout fragment_location
 layout fragment_risk
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_evacuation_image
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
