@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="#CCCCCC"
+        android:backgroundTint="#BDBDBD"/>
+
+    <!-- Evacuation Center Name -->
+    <TextView
+        android:id="@+id/tvEvacuationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Evacuation Center Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Image ViewPager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Image Indicator -->
+    <TextView
+        android:id="@+id/tvImageIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="1 / 3"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Address Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvEvacuationAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address will be displayed here"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Get Directions Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGetDirections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Directions"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#4A90E2"
+        app:cornerRadius="8dp"
+        android:padding="12dp"/>
+
+</LinearLayout>
