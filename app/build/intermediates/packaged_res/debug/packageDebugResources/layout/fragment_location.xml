@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Map View -->
     <org.osmdroid.views.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</FrameLayout>
+    <!-- Dropdown at the top -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/evacuationSiteDropdownLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Evacuation Site"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/evacuationSiteDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="14sp"
+                android:padding="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- My Location Button (bottom right) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="90dp"
+        android:contentDescription="My Location"
+        app:srcCompat="@drawable/ic_my_location"
+        app:tint="@android:color/white"
+        app:backgroundTint="#4A90E2" />
+
+    <!-- Bottom Sheet for Evacuation Details -->
+    <include layout="@layout/bottom_sheet_evacuation_details" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
