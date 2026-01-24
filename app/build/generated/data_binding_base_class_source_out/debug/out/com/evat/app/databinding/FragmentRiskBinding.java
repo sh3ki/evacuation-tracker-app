@@ -4,12 +4,13 @@ package com.evat.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.evat.app.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -17,19 +18,24 @@ import org.osmdroid.views.MapView;
 
 public final class FragmentRiskBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final CoordinatorLayout rootView;
+
+  @NonNull
+  public final FloatingActionButton fabMyLocation;
 
   @NonNull
   public final MapView mapView;
 
-  private FragmentRiskBinding(@NonNull FrameLayout rootView, @NonNull MapView mapView) {
+  private FragmentRiskBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull FloatingActionButton fabMyLocation, @NonNull MapView mapView) {
     this.rootView = rootView;
+    this.fabMyLocation = fabMyLocation;
     this.mapView = mapView;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +60,19 @@ public final class FragmentRiskBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.fabMyLocation;
+      FloatingActionButton fabMyLocation = ViewBindings.findChildViewById(rootView, id);
+      if (fabMyLocation == null) {
+        break missingId;
+      }
+
       id = R.id.mapView;
       MapView mapView = ViewBindings.findChildViewById(rootView, id);
       if (mapView == null) {
         break missingId;
       }
 
-      return new FragmentRiskBinding((FrameLayout) rootView, mapView);
+      return new FragmentRiskBinding((CoordinatorLayout) rootView, fabMyLocation, mapView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
