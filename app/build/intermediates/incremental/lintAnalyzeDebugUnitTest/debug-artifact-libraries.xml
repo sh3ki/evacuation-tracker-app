@@ -42,6 +42,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.github.bumptech.glide:glide:4.16.0@aar"
+      jars="C:\Users\USER\.gradle\caches\transforms-4\1763159dc8fff987047321567d5f9ec8\transformed\jetified-glide-4.16.0\jars\classes.jar"
+      resolved="com.github.bumptech.glide:glide:4.16.0"
+      folder="C:\Users\USER\.gradle\caches\transforms-4\1763159dc8fff987047321567d5f9ec8\transformed\jetified-glide-4.16.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.viewpager2:viewpager2:1.0.0@aar"
       jars="C:\Users\USER\.gradle\caches\transforms-4\f040f7f3456cf8d0bb02d541461cdedc\transformed\jetified-viewpager2-1.0.0\jars\classes.jar"
       resolved="androidx.viewpager2:viewpager2:1.0.0"
@@ -159,6 +172,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.coordinatorlayout:coordinatorlayout:1.2.0@aar"
+      jars="C:\Users\USER\.gradle\caches\transforms-4\dc6ee1015b8568c4e66c8212ed0c01c4\transformed\coordinatorlayout-1.2.0\jars\classes.jar"
+      resolved="androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+      folder="C:\Users\USER\.gradle\caches\transforms-4\dc6ee1015b8568c4e66c8212ed0c01c4\transformed\coordinatorlayout-1.2.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.appcompat:appcompat-resources:1.6.1@aar"
       jars="C:\Users\USER\.gradle\caches\transforms-4\0e5a5be9870b10df4c9ed15d67f66680\transformed\jetified-appcompat-resources-1.6.1\jars\classes.jar"
       resolved="androidx.appcompat:appcompat-resources:1.6.1"
@@ -176,19 +202,6 @@
       jars="C:\Users\USER\.gradle\caches\transforms-4\5237cf1fd6f9ff3c2c27518652cf3431\transformed\drawerlayout-1.1.1\jars\classes.jar"
       resolved="androidx.drawerlayout:drawerlayout:1.1.1"
       folder="C:\Users\USER\.gradle\caches\transforms-4\5237cf1fd6f9ff3c2c27518652cf3431\transformed\drawerlayout-1.1.1"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar"
-      jars="C:\Users\USER\.gradle\caches\transforms-4\7d28c56fb7216184119ae8ad721b0723\transformed\coordinatorlayout-1.1.0\jars\classes.jar"
-      resolved="androidx.coordinatorlayout:coordinatorlayout:1.1.0"
-      folder="C:\Users\USER\.gradle\caches\transforms-4\7d28c56fb7216184119ae8ad721b0723\transformed\coordinatorlayout-1.1.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -518,6 +531,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.github.bumptech.glide:gifdecoder:4.16.0@aar"
+      jars="C:\Users\USER\.gradle\caches\transforms-4\5d169d9cd5fca47a265311951236499e\transformed\jetified-gifdecoder-4.16.0\jars\classes.jar"
+      resolved="com.github.bumptech.glide:gifdecoder:4.16.0"
+      folder="C:\Users\USER\.gradle\caches\transforms-4\5d169d9cd5fca47a265311951236499e\transformed\jetified-gifdecoder-4.16.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.versionedparcelable:versionedparcelable:1.1.1@aar"
       jars="C:\Users\USER\.gradle\caches\transforms-4\28a65cbc814356af840f8915b6c444b1\transformed\versionedparcelable-1.1.1\jars\classes.jar"
       resolved="androidx.versionedparcelable:versionedparcelable:1.1.1"
@@ -666,9 +692,43 @@
       jars="C:\Users\USER\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
       resolved="org.jetbrains:annotations:13.0"/>
   <library
+      name="androidx.tracing:tracing:1.0.0@aar"
+      jars="C:\Users\USER\.gradle\caches\transforms-4\073c759eb7a3f97a14cd026f6ae7562b\transformed\jetified-tracing-1.0.0\jars\classes.jar"
+      resolved="androidx.tracing:tracing:1.0.0"
+      folder="C:\Users\USER\.gradle\caches\transforms-4\073c759eb7a3f97a14cd026f6ae7562b\transformed\jetified-tracing-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.resourceinspection:resourceinspection-annotation:1.0.1@jar"
       jars="C:\Users\USER\.gradle\caches\modules-2\files-2.1\androidx.resourceinspection\resourceinspection-annotation\1.0.1\8c21f8ff5d96d5d52c948707f7e4d6ca6773feef\resourceinspection-annotation-1.0.1.jar"
       resolved="androidx.resourceinspection:resourceinspection-annotation:1.0.1"/>
+  <library
+      name="com.github.bumptech.glide:disklrucache:4.16.0@jar"
+      jars="C:\Users\USER\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\disklrucache\4.16.0\411aa175d50d10b37c7a1a04d21a4e7145249557\disklrucache-4.16.0.jar"
+      resolved="com.github.bumptech.glide:disklrucache:4.16.0"/>
+  <library
+      name="com.github.bumptech.glide:annotations:4.16.0@jar"
+      jars="C:\Users\USER\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\annotations\4.16.0\90730f6498299d207aa0878124ab7585969808f0\annotations-4.16.0.jar"
+      resolved="com.github.bumptech.glide:annotations:4.16.0"/>
+  <library
+      name="androidx.exifinterface:exifinterface:1.3.6@aar"
+      jars="C:\Users\USER\.gradle\caches\transforms-4\af87830358ed500c4d5d9cfc341b5946\transformed\exifinterface-1.3.6\jars\classes.jar"
+      resolved="androidx.exifinterface:exifinterface:1.3.6"
+      folder="C:\Users\USER\.gradle\caches\transforms-4\af87830358ed500c4d5d9cfc341b5946\transformed\exifinterface-1.3.6"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
   <library
       name="androidx.emoji2:emoji2-views-helper:1.2.0@aar"
       jars="C:\Users\USER\.gradle\caches\transforms-4\2b12bbb9f1e87583d6761a64d3fbbdee\transformed\jetified-emoji2-views-helper-1.2.0\jars\classes.jar"
@@ -726,19 +786,6 @@
       jars="C:\Users\USER\.gradle\caches\transforms-4\0a92aa60b62997d54aba73a65c5fdac8\transformed\jetified-startup-runtime-1.1.1\jars\classes.jar"
       resolved="androidx.startup:startup-runtime:1.1.1"
       folder="C:\Users\USER\.gradle\caches\transforms-4\0a92aa60b62997d54aba73a65c5fdac8\transformed\jetified-startup-runtime-1.1.1"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.tracing:tracing:1.0.0@aar"
-      jars="C:\Users\USER\.gradle\caches\transforms-4\073c759eb7a3f97a14cd026f6ae7562b\transformed\jetified-tracing-1.0.0\jars\classes.jar"
-      resolved="androidx.tracing:tracing:1.0.0"
-      folder="C:\Users\USER\.gradle\caches\transforms-4\073c759eb7a3f97a14cd026f6ae7562b\transformed\jetified-tracing-1.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
