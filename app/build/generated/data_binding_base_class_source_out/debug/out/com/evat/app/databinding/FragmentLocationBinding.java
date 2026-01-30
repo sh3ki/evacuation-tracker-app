@@ -32,16 +32,21 @@ public final class FragmentLocationBinding implements ViewBinding {
   public final FloatingActionButton fabMyLocation;
 
   @NonNull
+  public final FloatingActionButton fabShowFavorites;
+
+  @NonNull
   public final MapView mapView;
 
   private FragmentLocationBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AutoCompleteTextView evacuationSiteDropdown,
       @NonNull TextInputLayout evacuationSiteDropdownLayout,
-      @NonNull FloatingActionButton fabMyLocation, @NonNull MapView mapView) {
+      @NonNull FloatingActionButton fabMyLocation, @NonNull FloatingActionButton fabShowFavorites,
+      @NonNull MapView mapView) {
     this.rootView = rootView;
     this.evacuationSiteDropdown = evacuationSiteDropdown;
     this.evacuationSiteDropdownLayout = evacuationSiteDropdownLayout;
     this.fabMyLocation = fabMyLocation;
+    this.fabShowFavorites = fabShowFavorites;
     this.mapView = mapView;
   }
 
@@ -90,6 +95,12 @@ public final class FragmentLocationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fabShowFavorites;
+      FloatingActionButton fabShowFavorites = ViewBindings.findChildViewById(rootView, id);
+      if (fabShowFavorites == null) {
+        break missingId;
+      }
+
       id = R.id.mapView;
       MapView mapView = ViewBindings.findChildViewById(rootView, id);
       if (mapView == null) {
@@ -97,7 +108,7 @@ public final class FragmentLocationBinding implements ViewBinding {
       }
 
       return new FragmentLocationBinding((CoordinatorLayout) rootView, evacuationSiteDropdown,
-          evacuationSiteDropdownLayout, fabMyLocation, mapView);
+          evacuationSiteDropdownLayout, fabMyLocation, fabShowFavorites, mapView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

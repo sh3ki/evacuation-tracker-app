@@ -9,6 +9,7 @@
     <color name="primary">#2E86DE</color>
     <color name="primary_blue">#2E86DE</color>
     <color name="primary_blue_dark">#1F5FA3</color>
+    <color name="route_color">#4285F4</color>
     <color name="text_primary">#0F172A</color>
     <color name="text_secondary">#4B5563</color>
     <string name="app_name">EVAT</string>
