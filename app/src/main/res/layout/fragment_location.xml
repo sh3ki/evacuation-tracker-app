@@ -22,7 +22,7 @@
             android:id="@+id/evacuationSiteDropdownLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select Evacuation Site"
+            android:hint="Favorites"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
             <AutoCompleteTextView
@@ -35,6 +35,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <!-- Show Favorites Button (bottom right, above My Location) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabShowFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="170dp"
+        android:contentDescription="Show Favorite Evacuation Centers"
+        app:srcCompat="@android:drawable/star_big_on"
+        app:tint="@android:color/holo_orange_light"
+        app:backgroundTint="@android:color/white" />
 
     <!-- My Location Button (bottom right) -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton

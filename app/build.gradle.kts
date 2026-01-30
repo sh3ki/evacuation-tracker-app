@@ -55,9 +55,13 @@ dependencies {
     
     // OpenStreetMap
     implementation("org.osmdroid:osmdroid-android:6.1.18")
+    implementation("com.github.MKergall:osmbonuspack:6.9.0")
     
     // Location Services
     implementation("com.google.android.gms:play-services-location:21.1.0")
+    
+    // HTTP Client for routing API
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     
     // Image Loading - Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")

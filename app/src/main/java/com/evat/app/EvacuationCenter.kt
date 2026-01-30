@@ -6,5 +6,8 @@ data class EvacuationCenter(
     val name: String,
     val address: String,
     val coordinates: GeoPoint,
-    val imageUrls: List<String>
+    val imageUrls: List<String>,
+    val capacity: Int = 0,
+    val facilities: String = "",
+    val hotline: String = ""
 )

@@ -4,6 +4,7 @@ package com.evat.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,6 +26,9 @@ public final class BottomSheetEvacuationDetailsBinding implements ViewBinding {
   public final LinearLayout bottomSheet;
 
   @NonNull
+  public final ImageButton btnFavorite;
+
+  @NonNull
   public final MaterialButton btnGetDirections;
 
   @NonNull
@@ -34,20 +38,35 @@ public final class BottomSheetEvacuationDetailsBinding implements ViewBinding {
   public final TextView tvEvacuationAddress;
 
   @NonNull
+  public final TextView tvEvacuationCapacity;
+
+  @NonNull
+  public final TextView tvEvacuationFacilities;
+
+  @NonNull
+  public final TextView tvEvacuationHotline;
+
+  @NonNull
   public final TextView tvEvacuationName;
 
   @NonNull
   public final TextView tvImageIndicator;
 
   private BottomSheetEvacuationDetailsBinding(@NonNull LinearLayout rootView,
-      @NonNull LinearLayout bottomSheet, @NonNull MaterialButton btnGetDirections,
-      @NonNull ViewPager2 imageViewPager, @NonNull TextView tvEvacuationAddress,
+      @NonNull LinearLayout bottomSheet, @NonNull ImageButton btnFavorite,
+      @NonNull MaterialButton btnGetDirections, @NonNull ViewPager2 imageViewPager,
+      @NonNull TextView tvEvacuationAddress, @NonNull TextView tvEvacuationCapacity,
+      @NonNull TextView tvEvacuationFacilities, @NonNull TextView tvEvacuationHotline,
       @NonNull TextView tvEvacuationName, @NonNull TextView tvImageIndicator) {
     this.rootView = rootView;
     this.bottomSheet = bottomSheet;
+    this.btnFavorite = btnFavorite;
     this.btnGetDirections = btnGetDirections;
     this.imageViewPager = imageViewPager;
     this.tvEvacuationAddress = tvEvacuationAddress;
+    this.tvEvacuationCapacity = tvEvacuationCapacity;
+    this.tvEvacuationFacilities = tvEvacuationFacilities;
+    this.tvEvacuationHotline = tvEvacuationHotline;
     this.tvEvacuationName = tvEvacuationName;
     this.tvImageIndicator = tvImageIndicator;
   }
@@ -81,6 +100,12 @@ public final class BottomSheetEvacuationDetailsBinding implements ViewBinding {
     missingId: {
       LinearLayout bottomSheet = (LinearLayout) rootView;
 
+      id = R.id.btnFavorite;
+      ImageButton btnFavorite = ViewBindings.findChildViewById(rootView, id);
+      if (btnFavorite == null) {
+        break missingId;
+      }
+
       id = R.id.btnGetDirections;
       MaterialButton btnGetDirections = ViewBindings.findChildViewById(rootView, id);
       if (btnGetDirections == null) {
@@ -99,6 +124,24 @@ public final class BottomSheetEvacuationDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvEvacuationCapacity;
+      TextView tvEvacuationCapacity = ViewBindings.findChildViewById(rootView, id);
+      if (tvEvacuationCapacity == null) {
+        break missingId;
+      }
+
+      id = R.id.tvEvacuationFacilities;
+      TextView tvEvacuationFacilities = ViewBindings.findChildViewById(rootView, id);
+      if (tvEvacuationFacilities == null) {
+        break missingId;
+      }
+
+      id = R.id.tvEvacuationHotline;
+      TextView tvEvacuationHotline = ViewBindings.findChildViewById(rootView, id);
+      if (tvEvacuationHotline == null) {
+        break missingId;
+      }
+
       id = R.id.tvEvacuationName;
       TextView tvEvacuationName = ViewBindings.findChildViewById(rootView, id);
       if (tvEvacuationName == null) {
@@ -112,8 +155,8 @@ public final class BottomSheetEvacuationDetailsBinding implements ViewBinding {
       }
 
       return new BottomSheetEvacuationDetailsBinding((LinearLayout) rootView, bottomSheet,
-          btnGetDirections, imageViewPager, tvEvacuationAddress, tvEvacuationName,
-          tvImageIndicator);
+          btnFavorite, btnGetDirections, imageViewPager, tvEvacuationAddress, tvEvacuationCapacity,
+          tvEvacuationFacilities, tvEvacuationHotline, tvEvacuationName, tvImageIndicator);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
