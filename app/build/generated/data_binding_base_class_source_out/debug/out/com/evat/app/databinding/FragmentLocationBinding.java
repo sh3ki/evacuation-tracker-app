@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -35,18 +36,22 @@ public final class FragmentLocationBinding implements ViewBinding {
   public final FloatingActionButton fabShowFavorites;
 
   @NonNull
+  public final ImageButton filterButton;
+
+  @NonNull
   public final MapView mapView;
 
   private FragmentLocationBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AutoCompleteTextView evacuationSiteDropdown,
       @NonNull TextInputLayout evacuationSiteDropdownLayout,
       @NonNull FloatingActionButton fabMyLocation, @NonNull FloatingActionButton fabShowFavorites,
-      @NonNull MapView mapView) {
+      @NonNull ImageButton filterButton, @NonNull MapView mapView) {
     this.rootView = rootView;
     this.evacuationSiteDropdown = evacuationSiteDropdown;
     this.evacuationSiteDropdownLayout = evacuationSiteDropdownLayout;
     this.fabMyLocation = fabMyLocation;
     this.fabShowFavorites = fabShowFavorites;
+    this.filterButton = filterButton;
     this.mapView = mapView;
   }
 
@@ -101,6 +106,12 @@ public final class FragmentLocationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.filterButton;
+      ImageButton filterButton = ViewBindings.findChildViewById(rootView, id);
+      if (filterButton == null) {
+        break missingId;
+      }
+
       id = R.id.mapView;
       MapView mapView = ViewBindings.findChildViewById(rootView, id);
       if (mapView == null) {
@@ -108,7 +119,7 @@ public final class FragmentLocationBinding implements ViewBinding {
       }
 
       return new FragmentLocationBinding((CoordinatorLayout) rootView, evacuationSiteDropdown,
-          evacuationSiteDropdownLayout, fabMyLocation, fabShowFavorites, mapView);
+          evacuationSiteDropdownLayout, fabMyLocation, fabShowFavorites, filterButton, mapView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
