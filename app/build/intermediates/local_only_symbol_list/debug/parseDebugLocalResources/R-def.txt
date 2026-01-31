@@ -59,10 +59,15 @@ id bottomNav
 id bottomSheet
 id btnFavorite
 id btnGetDirections
+id dropdownItemText
 id evacuationSiteDropdown
 id evacuationSiteDropdownLayout
 id fabMyLocation
 id fabShowFavorites
+id filterButton
+id filter_capacity
+id filter_clear
+id filter_distance
 id fragmentContainer
 id header
 id headerTitle
@@ -92,7 +97,9 @@ layout fragment_hotlines
 layout fragment_location
 layout fragment_risk
 layout item_evacuation_image
+layout item_evacuation_site_dropdown
 menu bottom_nav
+menu menu_evacuation_filter
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
