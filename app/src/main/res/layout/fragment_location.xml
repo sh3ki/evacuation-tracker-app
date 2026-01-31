@@ -17,23 +17,45 @@
         android:layout_margin="16dp"
         app:cardElevation="4dp"
         app:cardCornerRadius="8dp">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/evacuationSiteDropdownLayout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Favorites"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            android:orientation="horizontal"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical">
 
-            <AutoCompleteTextView
-                android:id="@+id/evacuationSiteDropdown"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/evacuationSiteDropdownLayout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="none"
-                android:textSize="14sp"
-                android:padding="12dp" />
+                android:layout_weight="1"
+                android:hint="Evacuation Sites"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/evacuationSiteDropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textSize="14sp"
+                    android:padding="12dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/filterButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Filter evacuation sites"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:tint="@color/primary" />
+
+        </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Show Favorites Button (bottom right, above My Location) -->
