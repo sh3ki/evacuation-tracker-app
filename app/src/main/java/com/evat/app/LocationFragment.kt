@@ -13,9 +13,11 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.Settings
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -23,6 +25,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.evat.app.databinding.FragmentLocationBinding
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -44,6 +47,12 @@ import java.io.IOException
 import kotlinx.coroutines.*
 
 class LocationFragment : Fragment() {
+    private enum class SortMode {
+        NONE,
+        DISTANCE,
+        CAPACITY
+    }
+
     private var _binding: FragmentLocationBinding? = null
     private val binding get() = _binding!!
     
@@ -59,6 +68,8 @@ class LocationFragment : Fragment() {
     private val PREFS_FAVORITES = "evac_favorites"
     private val KEY_FAVORITES = "favorite_centers"
     private var favoriteCenters: MutableSet<String> = mutableSetOf()
+    private var currentSortMode: SortMode = SortMode.NONE
+    private var dropdownCenters: List<EvacuationCenter> = emptyList()
     
     private val locationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -133,8 +144,9 @@ class LocationFragment : Fragment() {
                 address = "P3G8+GFP, Flores de Mayo, Novaliches, Quezon City, Metro Manila",
                 coordinates = GeoPoint(14.726333, 121.066167),
                 imageUrls = listOf(
-                    "https://picsum.photos/400/300?random=1",
-                    "https://picsum.photos/400/300?random=2"
+                    "android.resource://com.evat.app/drawable/plaza_1",
+                    "android.resource://com.evat.app/drawable/plaza_2",
+                    "android.resource://com.evat.app/drawable/plaza_3"
                 ),
                 capacity = 1500,
                 facilities = "Multi-purpose covered court, Barangay Hall, BPSO outpost, daycare center, and proximity to the Lagro Fire sub-station"
@@ -248,6 +260,7 @@ class LocationFragment : Fragment() {
         val btnGetDirections = bottomSheet.findViewById<MaterialButton>(R.id.btnGetDirections)
         btnGetDirections.setOnClickListener {
             currentSelectedCenter?.let { center ->
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
                 getDirectionsToEvacuationCenter(center)
             } ?: run {
                 Toast.makeText(requireContext(), "Please select an evacuation center first", Toast.LENGTH_SHORT).show()
@@ -256,29 +269,137 @@ class LocationFragment : Fragment() {
     }
     
     private fun setupDropdown() {
-        updateDropdownWithFavorites()
+        applySortMode(SortMode.NONE)
+
+        binding.filterButton.setOnClickListener { view ->
+            showFilterMenu(view)
+        }
         
         binding.evacuationSiteDropdown.setOnItemClickListener { _, _, position, _ ->
-            // Get the favorite center from the filtered list
-            val favoriteCentersList = evacuationCenters.filter { favoriteCenters.contains(it.name) }
-            if (position < favoriteCentersList.size) {
-                val selectedCenter = favoriteCentersList[position]
+            if (position in dropdownCenters.indices) {
+                val selectedCenter = dropdownCenters[position]
                 val originalIndex = evacuationCenters.indexOf(selectedCenter)
                 centerMapOnEvacuationSite(selectedCenter, originalIndex)
             }
         }
     }
-    
-    private fun updateDropdownWithFavorites() {
-        val favoriteCentersList = evacuationCenters.filter { favoriteCenters.contains(it.name) }
-        val favoriteNames = favoriteCentersList.map { it.name }
-        
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, favoriteNames)
+
+    private fun showFilterMenu(anchor: View) {
+        val popupMenu = PopupMenu(requireContext(), anchor)
+        popupMenu.menuInflater.inflate(R.menu.menu_evacuation_filter, popupMenu.menu)
+        popupMenu.setOnMenuItemClickListener { item: MenuItem ->
+            when (item.itemId) {
+                R.id.filter_distance -> applySortMode(SortMode.DISTANCE)
+                R.id.filter_capacity -> applySortMode(SortMode.CAPACITY)
+                R.id.filter_clear -> applySortMode(SortMode.NONE)
+            }
+            true
+        }
+        popupMenu.show()
+    }
+
+    private fun applySortMode(mode: SortMode) {
+        currentSortMode = mode
+        when (mode) {
+            SortMode.NONE -> updateDropdownListFavoritesFirst()
+            SortMode.CAPACITY -> updateDropdownListByCapacity()
+            SortMode.DISTANCE -> updateDropdownListByDistance()
+        }
+
+        if (mode != SortMode.DISTANCE) {
+            showDropdownList()
+        }
+    }
+
+    private fun updateDropdownListFavoritesFirst() {
+        val favoritesList = evacuationCenters.filter { favoriteCenters.contains(it.name) }
+        val nonFavoritesList = evacuationCenters.filterNot { favoriteCenters.contains(it.name) }
+        dropdownCenters = favoritesList + nonFavoritesList
+        refreshDropdownAdapter()
+    }
+
+    private fun updateDropdownListByCapacity() {
+        dropdownCenters = evacuationCenters.sortedByDescending { it.capacity }
+        refreshDropdownAdapter()
+    }
+
+    private fun updateDropdownListByDistance() {
+        if (!hasLocationPermissions()) {
+            Toast.makeText(requireContext(), "Location permission required to sort by distance", Toast.LENGTH_SHORT).show()
+            requestLocationPermissions()
+            return
+        }
+
+        val cancellationTokenSource = CancellationTokenSource()
+        fusedLocationClient.getCurrentLocation(
+            Priority.PRIORITY_HIGH_ACCURACY,
+            cancellationTokenSource.token
+        ).addOnSuccessListener { location ->
+            if (location == null) {
+                Toast.makeText(requireContext(), "Unable to get current location", Toast.LENGTH_SHORT).show()
+                return@addOnSuccessListener
+            }
+
+            val start = GeoPoint(location.latitude, location.longitude)
+            Toast.makeText(requireContext(), "Sorting by distance...", Toast.LENGTH_SHORT).show()
+
+            viewLifecycleOwner.lifecycleScope.launch {
+                val distanceMap = withContext(Dispatchers.IO) {
+                    val map = mutableMapOf<EvacuationCenter, Double>()
+                    evacuationCenters.forEach { center ->
+                        map[center] = fetchRouteDistanceSync(start, center.coordinates)
+                    }
+                    map
+                }
+
+                dropdownCenters = evacuationCenters.sortedBy { distanceMap[it] ?: Double.MAX_VALUE }
+                refreshDropdownAdapter()
+                showDropdownList()
+            }
+        }.addOnFailureListener {
+            Toast.makeText(requireContext(), "Failed to get location", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showDropdownList() {
+        binding.evacuationSiteDropdown.post {
+            if (!binding.evacuationSiteDropdown.isPopupShowing) {
+                binding.evacuationSiteDropdown.showDropDown()
+            }
+        }
+    }
+
+    private fun refreshDropdownAdapter() {
+        val selectedName = binding.evacuationSiteDropdown.text?.toString()?.trim().orEmpty()
+        val adapter = EvacuationSiteDropdownAdapter(
+            requireContext(),
+            dropdownCenters,
+            favoriteCenters
+        )
         binding.evacuationSiteDropdown.setAdapter(adapter)
-        
-        // Clear the dropdown text if no favorites
-        if (favoriteNames.isEmpty()) {
+
+        if (selectedName.isEmpty() || dropdownCenters.none { it.name == selectedName }) {
             binding.evacuationSiteDropdown.setText("", false)
+        }
+    }
+
+    private fun fetchRouteDistanceSync(start: GeoPoint, end: GeoPoint): Double {
+        val url = "https://router.project-osrm.org/route/v1/driving/${start.longitude},${start.latitude};${end.longitude},${end.latitude}?overview=false"
+        val request = Request.Builder()
+            .url(url)
+            .build()
+
+        return try {
+            client.newCall(request).execute().use { response ->
+                if (!response.isSuccessful) return Double.MAX_VALUE
+                val responseBody = response.body?.string() ?: return Double.MAX_VALUE
+                val json = JSONObject(responseBody)
+                val routes = json.getJSONArray("routes")
+                if (routes.length() == 0) return Double.MAX_VALUE
+                routes.getJSONObject(0).getDouble("distance")
+            }
+        } catch (e: Exception) {
+            Double.MAX_VALUE
         }
     }
     
@@ -494,10 +615,15 @@ class LocationFragment : Fragment() {
         prefs.edit().putStringSet(KEY_FAVORITES, favoriteCenters).apply()
         
         // Update dropdown to reflect changes in favorites
-        updateDropdownWithFavorites()
+        if (currentSortMode == SortMode.NONE) {
+            updateDropdownListFavoritesFirst()
+        } else {
+            refreshDropdownAdapter()
+        }
     }
     
     private fun centerMapOnEvacuationSite(center: EvacuationCenter, index: Int) {
+        locationOverlay?.disableFollowLocation()
         binding.mapView.controller.animateTo(center.coordinates)
         
         // Highlight the selected marker
@@ -832,6 +958,8 @@ class LocationFragment : Fragment() {
     
     private fun zoomToRoute(routePoints: List<GeoPoint>) {
         if (routePoints.isEmpty()) return
+
+        val currentZoom = binding.mapView.zoomLevelDouble
         
         var minLat = routePoints[0].latitude
         var maxLat = routePoints[0].latitude
@@ -849,21 +977,9 @@ class LocationFragment : Fragment() {
         val centerLon = (minLon + maxLon) / 2
         
         binding.mapView.controller.setCenter(GeoPoint(centerLat, centerLon))
-        
-        // Calculate appropriate zoom level
-        val latDiff = maxLat - minLat
-        val lonDiff = maxLon - minLon
-        val maxDiff = maxOf(latDiff, lonDiff)
-        
-        val zoom = when {
-            maxDiff > 0.1 -> 11.0
-            maxDiff > 0.05 -> 12.0
-            maxDiff > 0.02 -> 13.0
-            maxDiff > 0.01 -> 14.0
-            else -> 15.0
-        }
-        
-        binding.mapView.controller.setZoom(zoom)
+
+        // Keep current zoom level stable when showing directions
+        binding.mapView.controller.setZoom(currentZoom)
     }
     
     private fun decodePolyline(encoded: String): List<GeoPoint> {
@@ -918,5 +1034,55 @@ class LocationFragment : Fragment() {
         drawable.setBounds(0, 0, canvas.width, canvas.height)
         drawable.draw(canvas)
         return bitmap
+    }
+
+    private class EvacuationSiteDropdownAdapter(
+        context: Context,
+        private val items: List<EvacuationCenter>,
+        private val favorites: Set<String>
+    ) : ArrayAdapter<EvacuationCenter>(context, R.layout.item_evacuation_site_dropdown, items) {
+
+        override fun getCount(): Int = items.size
+
+        override fun getItem(position: Int): EvacuationCenter = items[position]
+
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+            val view = convertView ?: LayoutInflater.from(context)
+                .inflate(R.layout.item_evacuation_site_dropdown, parent, false)
+            val textView = view.findViewById<TextView>(R.id.dropdownItemText)
+            val center = items[position]
+            textView.text = center.name
+
+            val isFavorite = favorites.contains(center.name)
+            if (isFavorite) {
+                val heart = ContextCompat.getDrawable(context, R.drawable.ic_favorite)
+                heart?.setTint(ContextCompat.getColor(context, android.R.color.holo_orange_light))
+                textView.setCompoundDrawablesWithIntrinsicBounds(heart, null, null, null)
+                textView.compoundDrawablePadding = 12
+            } else {
+                textView.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            }
+            return view
+        }
+
+        override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+            val view = convertView ?: LayoutInflater.from(context)
+                .inflate(R.layout.item_evacuation_site_dropdown, parent, false)
+            val textView = view.findViewById<TextView>(R.id.dropdownItemText)
+            val center = items[position]
+            textView.text = center.name
+
+            val isFavorite = favorites.contains(center.name)
+            if (isFavorite) {
+                val heart = ContextCompat.getDrawable(context, R.drawable.ic_favorite)
+                heart?.setTint(ContextCompat.getColor(context, android.R.color.holo_orange_light))
+                textView.setCompoundDrawablesWithIntrinsicBounds(heart, null, null, null)
+                textView.compoundDrawablePadding = 12
+            } else {
+                textView.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            }
+
+            return view
+        }
     }
 }
