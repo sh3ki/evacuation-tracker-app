@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_distance"
+        android:title="Filter by distance (closest → farthest)" />
+    <item
+        android:id="@+id/filter_capacity"
+        android:title="Filter by capacity (largest → smallest)" />
+    <item
+        android:id="@+id/filter_clear"
+        android:title="Clear filter" />
+</menu>
