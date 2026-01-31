@@ -4,7 +4,17 @@
             "outputFile": "com.evat.app-mergeDebugResources-40:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Mark Lawrence\\.gradle\\caches\\transforms-4\\888452aa4e2b47ab1c7abe839e423920\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\e8a21cd347b5632a92ff6ccdf3eb85c7\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\888452aa4e2b47ab1c7abe839e423920\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Mark Lawrence\\.gradle\\caches\\transforms-4\\e8a21cd347b5632a92ff6ccdf3eb85c7\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]
