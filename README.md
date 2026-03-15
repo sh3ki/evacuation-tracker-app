@@ -13,3 +13,8 @@ Kotlin Android app with a splash screen and a single home screen showing a heade
 
 ## Fonts
 - Using `sans-serif-medium`/`sans-serif-black` (system modern/professional). If you prefer a specific font, add it to `res/font` and set it in styles/text appearances.
+
+
+./gradlew assembleDebug
+adb -s emulator-5554 install -r app/build/outputs/apk/debug/app-debug.apk
+adb -s emulator-5554 shell am start -n com.evat.app/com.evat.app.SplashActivity
